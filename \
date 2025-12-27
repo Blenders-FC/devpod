@@ -1,0 +1,29 @@
+{
+  "name": "OP3 ROS2 Humble DevPod",
+  "privileged": true,
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "USERNAME": "${localEnv:USER}",
+      "USER_UID": "${localEnv:UID}",
+      "USER_GID": "${localEnv:GID}"
+    }
+  },
+  "workspaceFolder": "/workspace",
+  "containerUser": "${localEnv:USER}",
+  "postCreateCommand": [
+    "sudo rosdep update && mkdir -p src && vcs import src < repos.repos && rosdep install --from-paths src --ignore-src -r -y"
+  ],
+  "remoteEnv": {
+    "ROS_DISTRO": "humble"
+  },
+  "extensions": [
+    "ms-iot.vscode-ros",
+    "ms-vscode.cpptools",
+    "ms-python.python"
+  ],
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  }
+}
+
