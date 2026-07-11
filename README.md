@@ -1,5 +1,21 @@
 # Developer container for BlendersFC
 ## Setup
+1. Install nvidia drivers
+```
+sudo apt update
+```
+See recommended drivers for your system
+```
+ubuntu-drivers devices
+```
+```
+sudo ubuntu-drivers autoinstall
+```
+or install directly recommended version
+```
+sudo apt install nvidia-driver-XXX
+```
+## Install
 1. Download [devpod](https://devpod.sh/)
 2. Clone this repo
 3. Run in base dir of repo
@@ -47,4 +63,8 @@ source install/setup.bash
 ```
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 echo "source /home/ws/install/setup.bash" >> ~/.bashrc
+```
+5. To test installation with gazebo, run this
+```
+ros2 launch src/ROBOTIS-OP3-Simulations/op3_gazebo_ros2/launch/robot_sim.launch.py
 ```

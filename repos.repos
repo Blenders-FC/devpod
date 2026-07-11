@@ -49,6 +49,11 @@ repositories:
     type: git
     url: https://github.com/Blenders-FC/ROBOTIS-OP3-Tools.git
     version: jazzy-devel
+  
+  ROBOTIS-OP3-Simulations:
+    type: git
+    url: https://github.com/ROBOTIS-GIT/ROBOTIS-OP3-Simulations.git
+    version: jazzy-devel
 
   humanoid_msgs:
     type: git
