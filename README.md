@@ -15,6 +15,14 @@ or install directly recommended version
 ```
 sudo apt install nvidia-driver-XXX
 ```
+
+ 
+2. Install docker
+
+Download [docker](https://docs.docker.com/engine/install/ubuntu/)
+
+Setup [Nvidia Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
+
 ## Install
 1. Download [devpod](https://devpod.sh/)
 2. Clone this repo
